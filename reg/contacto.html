@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.HTML">Inicio</a>
+        <a href="menu/menu sencillo.html">Menú</a>
+        <a href="../index.html"><img src="../image2.png" alt="Logo" style="width: 25%; height:auto"></a>
+        <a href="ubicaciones.html">Ubicaciones</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="content">
+        <h1>Contacto</h1>
+        <p>Ponte en contacto con nosotros para más información.</p>
+        
+        <div style="display: flex; align-items: center;">
+            <form style="margin-right: 20px;" action="https://formsubmit.co/jesparsa070@gmail.com" method="POST" enctype="multipart/form-data">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Teléfono:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                
+                <label for="file">Subir tu CV:</label><br>
+                <input type="file" id="file" name="file" required><br><br>
+                
+                <button type="submit">Enviar</button>
+                
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+            
+            <img src="../image.png" alt="Imagen Contacto" style="max-width: 50%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        </div>
+        
+        <hr class="is-yellow">
+        <br><br>
+        
+        <div class="bottom-menu">
+            <a href="menu/menu sencillo.html">Menu</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicaciones.html">Encuentra nuestra sucursal</a>
+            <a href="#">Bolsa de Trabajo</a>
+        </div>
+        
+        <br><br><br><br><br>
+    </div>
+    
+    <section class="buttons">
+        <a href="https://atom.bio/baguettosanpancho" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/parrillada_sta.regina/" class="fa fa-instagram"></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwsCQrdnzTVfcWKkcDWRQQFfCtSczvvMLJgxDgwHDMPCHZqmDHpTLSsHmfBdVdKVgRpHQf" class="fa fa-google"></a>
+        <a href="https://wa.me/4494002243" class="fa fa-whatsapp"></a>
+    </section><br>
+</body>
+</html>

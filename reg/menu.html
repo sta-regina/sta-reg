@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+    <link rel="stylesheet" href="../reg/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <body>
+        <center>
+        <div class="navbar">
+            <a href="../index.HTML">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="../index.HTML"><img src="../image2.png" alt="Logo" style="width: 25%; height:auto"></a>
+            <a href="ubicaciones.html">Ubicaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="content">
+            <h1>MENU</h1>
+            <p>Consulta nuestro variado y delicioso menu</p>
+        </div>
+        <div class="container">
+            <div class="menu-sections">
+                <div class="menu-section">
+                    <select id="entradas" onchange="updateMenu('entradas')">
+                        <option value="arrachera_burger">Entradas</option>
+                        <option value="guacamole">Guacamole</option>
+                        <option value="papas_casa">Papas de la Casa</option>
+                        <option value="aros_cebola_casa">Aros de Cebolla de la Casa</option>
+                        <option value="papas_bacon">Papas Bacón</option>
+                        <option value="papas_dulces_chipotle">Papas Dulces Chipotle</option>
+                        <option value="papas_salsas_negras">Papas a las Salsas Negras</option>
+                        <option value="papas_guajolotas">Papas Guajolotas</option>
+                        <option value="boneless_doritos">Boneless Doritos</option>
+                        <option value="gajos_papa">Gajos de Papa</option>
+                        <option value="papas_rejilla">Papas Rejilla</option>
+                        <option value="gajos_papa_parmesano">Gajos de Papa con Parmesano y Queso Amarillo</option>
+                        <option value="papas_francesa">Papas a la Francesa</option>
+                        <option value="salchipulpos_papas">Salchipulpos c/papas</option>
+                        <option value="nuggets_pollo_papas">Nuggets de Pollo c/papas</option>
+                        <option value="palomitas_pollo_papas">Palomitas de Pollo c/papas</option>
+                        <option value="aros_cebola">Aros de Cebolla</option>
+                        <option value="dedos_queso">Dedos de Queso (6pza)</option>
+                        <option value="tabla_mixeada">Tabla Mixeada</option>
+                        <option value="sta_regina_sushi_box">Sta Regina Sushi Box</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+
+                    <select id="pizzas"  onchange="updateMenu('pizzas')">
+                        <option value="arrachera_burger">Pizzas</option>
+                        <optgroup label="Pizza Clásica">
+                            <option value="pepperoni">Pepperoni</option>
+                            <option value="salchicha">Salchicha</option>
+                            <option value="salami">Salami</option>
+                            <option value="margarita">Margarita (jitomate y albahaca)</option>
+                            <option value="jamon">Jamón</option>
+                            <option value="chorizo">Chorizo</option>
+                            <option value="champinones">Champiñones</option>
+                            <option value="quesabrosa">Quesabrosa (Extra-Queso mozzarella)</option>
+                            <option value="aceituna_negra">Aceituna negra</option>
+                            <option value="salchicha_para_asar">Salchicha para asar</option>
+                            <option value="pimientos">Pimientos</option>
+                            <option value="arugula">Arugula</option>
+                            <option value="espinaca">Espinaca</option>
+                        </optgroup>
+                        <optgroup label="Pizza Gourmet">
+                            <option value="silvestre">Silvestre</option>
+                            <option value="marina">Marina</option>
+                            <option value="mediterranea">Mediterránea</option>
+                            <option value="vegetariana">Vegetariana</option>
+                            <option value="espanolete">Españolete</option>
+                            <option value="hawaiana">Hawaiana</option>
+                            <option value="mexicana">Mexicana</option>
+                            <option value="championa_peperona">Champion Peperona</option>
+                            <option value="cuatro_quesos">Cuatro Quesos</option>
+                            <option value="negrita">Negrita</option>
+                            <option value="carnes_frias">Carnes Frías</option>
+                            <option value="pizza_jalapeno">Pizza Jalapeño</option>
+                            <option value="pizza_de_papa">Pizza de Papa</option>
+                        </optgroup>
+                        <optgroup label="Pizza Sofisticada">
+                            <option value="boneless">BONELESS</option>
+                            <option value="arracherona">ARRACHERONA</option>
+                            <option value="pastor_pinia">PASTOR CON PIÑA</option>
+                            <option value="doritos_pizza">DORITOS PIZZA</option>
+                        </optgroup>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="hamburguesas" onchange="updateMenu('hamburguesas')">
+                        <option value="arrachera_burger">Hamburguesas</option>
+                        <optgroup label="Hamburguesa Clásica">
+                            <option value="clasica_burger">Clásica Burger</option>
+                            <option value="bacon_burger">Bacon Burger</option>
+                            <option value="guacamole_burger">Guacamole Burger</option>
+                            <option value="fritos_burger">Fritos Burger</option>
+                            <option value="pollito_burger">Pollito Burger</option>
+                            <option value="bbq_bufalo_burger">BBQ o Búfalo Burger</option>
+                            <option value="onion_ring_burger">Onion Ring Burger</option>
+                            <option value="mexican_burger">Mexican Burger</option>
+                            <option value="chicken_chipotle_tender">Chicken Chipotle Tender</option>
+                            <option value="champi_burger">Champi Burger</option>
+                            <option value="hawaiana_burger">Hawaiana Burger</option>
+                            <option value="arrachera_burger">Arrachera Burger</option>
+                            <option value="doritos_burger">Doritos Burger</option>
+                            <option value="chile_momia_burger">Chile Momia Burger</option>
+                        </optgroup>
+                        <optgroup label="Hamburguesa Premium">
+                            <option value="crunchy_burger">CRUNCHY BURGUER (POLLO EMPANIZADO)</option>
+                            <option value="la_huevona_burger">LA HUEVONA BURGUER</option>
+                            <option value="hamburguesa_camarones_empanizados">HAMBURGUESA CAMARONES EMPANIZADOS</option>
+                            <option value="hawaiana_endiablada">HAWAIANA ENDIABLADA</option>
+                            <option value="nortena_burger">NORTEÑA BURGUER</option>
+                            <option value="cochinita_burger">COCHINITA BURGUER</option>
+                            <option value="boneless_burger">BONELESS BURGUER</option>
+                            <option value="pulled_pork">PULLED PORK</option>
+                        </optgroup>
+                        <optgroup label="Hamburguesa Nueva Creación">
+                            <option value="chees_chees_burger">CHEES CHEES BÚRGUER</option>
+                            <option value="camarones_al_ajillo">CAMARONES AL AJILLO</option>
+                            <option value="chori_burger">CHORI BURGUER</option>
+                            <option value="chips_burger">CHIPS BURGUER</option>
+                            <option value="la_camarona">LA CAMARONA</option>
+                        </optgroup>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="costillas" onchange="updateMenu('costillas')">
+                        <option value="arrachera_burger">Costillas</option>
+                        <option value="costillas">Costillas</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="alitas" onchange="updateMenu('alitas')">
+                        <option value="arrachera_burger">Alitas</option>
+                        <option value="alitas_8">Orden con 8 piezas</option>
+                        <option value="alitas_12">Orden con 12 piezas</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="baguet" onchange="updateMenu('baguet')">
+                        <option value="arrachera_burger">Baguettes</option>
+                        <option value="choripan">Choripán</option>
+                        <option value="cuatro_quesos">Cuatro Quesos</option>
+                        <option value="pechuga_pollo">Pechuga de Pollo</option>
+                        <option value="pierna_casa">Pierna de la casa</option>
+                        <option value="jamon_serrano">Jamón Serrano</option>
+                        <option value="carnes_frias">Baguette Carnes Frías</option>
+                        <option value="arrachera">Arrachera</option>
+                        <option value="italiano">Italiano</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="alambres" onchange="updateMenu('alambres')">
+                        <option value="arrachera_burger">Alambres</option>
+                        <option value="santa_maria">SANTA MARÍA</option>
+                        <option value="santa_catarina">SANTA CATARINA</option>
+                        <option value="santa_valeria">SANTA VALERIA</option>
+                        <option value="santa_regina">SANTA REGINA</option>
+                        <option value="mar_y_tierra">MAR Y TIERRA</option>
+                        <option value="santo_pecado">SANTO PECADO</option>
+                        <option value="santa_culpa">SANTA CULPA</option>
+                        <option value="santo_delirio">SANTO DELIRIO</option>
+                        <option value="santo_dios">SANTO DIOS</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="cortes" onchange="updateMenu('cortes')">
+                        <option value="arrachera_burger">Cortes de Carne</option>
+                        <option value="arrachera_250gr">CORTE DE ARRACHERA, 250gr.</option>
+                        <option value="carne_asada_250gr">CARNE ASADA, 250gr.</option>
+                        <option value="t_bone">T-BONE</option>
+                        <option value="pechuga_lemon_peper">PECHUGA LEMON-PEPER: 250gr.</option>
+                        <option value="rib_eye">RIB EYE</option>
+                        <option value="parrillada_personal">PARRILLADA (personal)</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="quesadillas" onchange="updateMenu('quesadillas')">
+                        <option value="arrachera_burger">Quesadillas</option>
+                        <option value="pastor_gringa">Pastor, la original gringa</option>
+                        <option value="bistec_lechero">Bistec, el legendario lechero</option>
+                        <option value="chuleta">Chuleta</option>
+                        <option value="arrachera">Arrachera</option>
+                        <option value="chorizo">Chorizo</option>
+                        <option value="champiñones">Champiñones</option>
+                        <option value="sencilla">Sencilla</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="tacos" onchange="updateMenu('tacos')">
+                        <option value="arrachera_burger">Tacos</option>
+                        <option value="pastor">Pastor</option>
+                        <option value="asada">Asada</option>
+                        <option value="arrachera">Arrachera</option>
+                        <option value="chorizo">Chorizo</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="tortas" onchange="updateMenu('tortas')">
+                        <option value="arrachera_burger">Tortas</option>
+                        <optgroup label="Tortas">
+                            <option value="asada">Asada</option>
+                            <option value="pollo">Pollo</option>
+                            <option value="jamon">Jamón</option>
+                            <option value="chorizo">Chorizo</option>
+                            <option value="pastor">Pastor</option>
+                            <option value="chuleta">Chuleta</option>
+                            <option value="arrachera">Arrachera</option>
+                        </optgroup>
+                        <optgroup label="Tortas Combinadas">
+                            <option value="champiñones_pollo_queso">Torta de Champiñones y pollo</option>
+                            <option value="jamon_champinones_queso">Torta de Jamón y champiñones</option>
+                            <option value="queso_fundido">Torta de Queso fundido</option>
+                            <option value="huevo_jamon_queso">Torta de Huevo y jamón</option>
+                            <option value="jamon_queso">Torta de Jamón y queso fundido</option>
+                            <option value="chuleta_pina_champinones_queso">Torta de Chuleta y champiñones</option>
+                            <option value="pastor_pina_jamon_queso">Torta de Carne al pastor</option>
+                        </optgroup>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="ensaladas" onchange="updateMenu('ensaladas')">
+                        <option value="arrachera_burger">Ensaladas</option>
+                        <option value="pollo_empanizado">Ensalada de pollo empanizado</option>
+                        <option value="frutos_dulces">Frutos Dulces</option>
+                        <option value="arrachera">Ensalada de Arrachera</option>
+                        <option value="pechuga_pollo">Pechuga de Pollo</option>
+                        <option value="bufalo_boneless">Búfalo Boneless</option>
+                    </select>
+                </div>
+    
+                <div class="menu-section">
+                    <select id="postres" onchange="updateMenu('postres')">
+                        <option value="arrachera_burger">Postres</option>
+                        <option value="pan_elote_cajeta">Pan de elote con cajeta</option>
+                        <option value="miniwafles_helado">Miniwafles con helado</option>
+                        <option value="crepas">Crepas</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div id="food-display">
+                <img id="food-image" src="" alt="" style="display:none;">
+                <p id="food-description" class="description"></p>
+            </div>
+        </div>
+    
+        <script>
+            const menuData = {
+                entradas: {
+                    guacamole: {
+                        img: 'imgm/entradas/guacamole.jpg',
+                        desc: 'Guacamole: Receta especial de la abuela con pico de gallo y auténtico estilo mexicano…125'
+                    },
+                    papas_casa: {
+                        img: 'imgm/entradas/papas de la casa.jpg',
+                        desc: 'Papas de la Casa: Nuestras deliciosas papas a la francesa (200gr) bañadas en tu salsa favorita con una capa de queso cheddar líquido…105'
+                    },
+                    aros_cebola_casa: {
+                        img: 'imgm/entradas/aros de la casa.jpg',
+                        desc: 'Aros de Cebolla de la Casa: Aros de cebolla (200 gr) bañados en tu salsa favorita con una capa de queso cheddar líquido…135'
+                    },
+                    papas_bacon: {
+                        img: 'imgm/entradas/papas bacon.jpg',
+                        desc: 'Papas Bacón: Deliciosas y crujientes papas a la francesa (200gr) con el delicioso queso cheddar derretido y cubiertas de tocino doradito…115'
+                    },
+                    papas_dulces_chipotle: {
+                        img: 'imgm/entradas/papas dulce.jpg',
+                        desc: 'Papas Dulces Chipotle: Papas crisscut (200 gr) con salsa dulce de la casa y chipotle…115'
+                    },
+                    papas_salsas_negras: {
+                        img: 'imgm/entradas/papas salsa negra.jpg',
+                        desc: 'Papas a las Salsas Negras: Papas a la francesa (200 gr) y cebolla en trozos a la mantequilla, aceite de oliva, pimienta, cilantro y salsas negras con un limón…115'
+                    },
+                    papas_guajolotas: {
+                        img: 'imgm/entradas/papas guaj y chip.jpg',
+                        desc: 'Papas Guajolotas: Papas gajo, queso amarillo, salchicha para asar y queso parmesano…119'
+                    },
+                    boneless_doritos: {
+                        img: 'imgm/entradas/boneless dorito.jpg',
+                        desc: 'Boneless Doritos: Boneless del sabor de tu elección con doritos y queso cheddar…195'
+                    },
+                    gajos_papa: {
+                        img: 'imgm/entradas/papas gajo.jpg',
+                        desc: 'Gajos de Papa: Deliciosos gajos de papa…65'
+                    },
+                    papas_rejilla: {
+                        img: 'imgm/entradas/rejilla.jpg',
+                        desc: 'Papas Rejilla: Crujientes papas rejilla…65'
+                    },
+                    gajos_papa_parmesano: {
+                        img: 'imgm/entradas/papas parmesano.jpg',
+                        desc: 'Gajos de Papa con Parmesano y Queso Amarillo: Gajos de papa con parmesano y queso amarillo…95'
+                    },
+                    papas_francesa: {
+                        img: 'imgm/entradas/papas a la fransesa.jpg',
+                        desc: 'Papas a la Francesa: Papas a la francesa…60'
+                    },
+                    salchipulpos_papas: {
+                        img: 'imgm/entradas/salchi pulpos.jpg',
+                        desc: 'Salchipulpos c/papas: Salchipulpos con papas…69'
+                    },
+                    nuggets_pollo_papas: {
+                        img: 'imgm/entradas/nuggets.jpg',
+                        desc: 'Nuggets de Pollo c/papas: Nuggets de pollo con papas…69'
+                    },
+                    palomitas_pollo_papas: {
+                        img: 'imgm/entradas/palomitas pollo.jpg',
+                        desc: 'Palomitas de Pollo c/papas: Palomitas de pollo con papas…69'
+                    },
+                    aros_cebola: {
+                        img: 'imgm/entradas/aros de cebolla.jpg',
+                        desc: 'Aros de Cebolla: Aros de cebolla…89'
+                    },
+                    dedos_queso: {
+                        img: 'imgm/entradas/dedos de queso.jpg',
+                        desc: 'Dedos de Queso (6pza): Dedos de queso…109'
+                    },
+                    tabla_mixeada: {
+                        img: 'imgm/entradas/tabla mixteada.jpg',
+                        desc: 'Tabla Mixeada: Incluye dedos de queso, papas a la francesa, gajos de papa, alitas (4), aros de cebolla y mini pizza de pepperoni…289'
+                    },
+                    sta_regina_sushi_box: {
+                        img: 'imgm/entradas/sushi box.jpg',
+                        desc: 'Sta Regina Sushi Box: Incluye aros de cebolla, gajos de papa, alitas, boneless, mini pizza, papas a la francesa, 2 rollos empanizados de sushi, aderezos, cátsup…549'
+                    }
+                },
+                pizzas: {
+                pepperoni: {
+                    img: 'imgm/pizzas/pizza peperoni.jpg',
+                    desc: 'Pizza de Pepperoni: Pepperoni fresco y queso mozzarella…159'
+                },
+                salchicha: {
+                    img: 'imgm/pizzas/pizza salchicha.jpg',
+                    desc: 'Pizza de Salchicha: Salchicha jugosa y queso mozzarella…159'
+                },
+                salami: {
+                    img: 'imgm/pizzas/piz salami.jpg',
+                    desc: 'Pizza de Salami: Salami picante y queso mozzarella…159'
+                },
+                margarita: {
+                    img: 'imgm/pizzas/piz margarita.jpg',
+                    desc: 'Pizza Margarita: Jitomate fresco y albahaca sobre una capa de mozzarella…159'
+                },
+                jamon: {
+                    img: 'imgm/pizzas/piz jamon.jpg',
+                    desc: 'Pizza de Jamón: Jamón y queso mozzarella…159'
+                },
+                chorizo: {
+                    img: 'imgm/pizzas/piz chorizo.jpg',
+                    desc: 'Pizza de Chorizo: Chorizo mexicano y queso mozzarella…159'
+                },
+                champinones: {
+                    img: 'imgm/pizzas/pizz champi.jpg',
+                    desc: 'Pizza de Champiñones: Champiñones frescos y queso mozzarella…159'
+                },
+                quesabrosa: {
+                    img: 'imgm/pizzas/piz quesa.jpg',
+                    desc: 'Pizza Quesabrosa: Extra-queso mozzarella…159'
+                },
+                aceituna_negra: {
+                    img: 'imgm/pizzas/piz aceituna.jpg',
+                    desc: 'Pizza de Aceituna Negra: Aceitunas negras y queso mozzarella…159'
+                },
+                salchicha_para_asar: {
+                    img: 'imgm/pizzas/piz salchicha asar.jpg',
+                    desc: 'Pizza de Salchicha para Asar: Salchichas para asar y queso mozzarella…159'
+                },
+                pimientos: {
+                    img: 'imgm/pizzas/piz pimientos.jpg',
+                    desc: 'Pizza de Pimientos: Pimientos frescos y queso mozzarella…159'
+                },
+                arugula: {
+                    img: 'imgm/pizzas/piz aragula.jpg',
+                    desc: 'Pizza de Arugula: Arugula fresca y queso mozzarella…159'
+                },
+                espinaca: {
+                    img: 'imgm/pizzas/piz espinaca.jpg',
+                    desc: 'Pizza de Espinaca: Espinacas frescas y queso mozzarella…159'
+                },
+                silvestre: {
+                    img: 'imgm/pizzas/silvestre.jpg',
+                    desc: 'Pizza Silvestre: Jitomate Cherry, champiñones, aceitunas negras y arugula…179'
+                },
+                marina: {
+                    img: 'imgm/pizzas/piz marina.jpg',
+                    desc: 'Pizza Marina: Queso gouda con jitomate Cherry, arugula y queso crema…179'
+                },
+                mediterranea: {
+                    img: 'imgm/pizzas/piz mediterra.jpg',
+                    desc: 'Pizza Mediterránea: Pepperoni, jamón, aceitunas negras, jitomate cherry y albahaca…179'
+                },
+                vegetariana: {
+                    img: 'imgm/pizzas/piz vegeta.jpg',
+                    desc: 'Pizza Vegetariana: Calabaza, champiñones, aceitunas negras, pimientos y especias…179'
+                },
+                espanolete: {
+                    img: 'imgm/pizzas/espanoleta.jpg',
+                    desc: 'Pizza Españolete: Chorizo español y queso mozzarella…179'
+                },
+                hawaiana: {
+                    img: 'imgm/pizzas/hawaiana.jpg',
+                    desc: 'Pizza Hawaiana: Jamón con piña…179'
+                },
+                mexicana: {
+                    img: 'imgm/pizzas/mexicana.jpg',
+                    desc: 'Pizza Mexicana: Chorizo, pimientos, jitomate, cebolla morada y aguacate…179'
+                },
+                championa_peperona: {
+                    img: 'imgm/pizzas/piz champ y pepe.jpg',
+                    desc: 'Pizza Championa Peperona: Queso crema, champiñones y pepperoni…179'
+                },
+                cuatro_quesos: {
+                    img: 'imgm/pizzas/piz 4 quesos.jpg',
+                    desc: 'Pizza Cuatro Quesos: Queso mozzarella, parmesano, queso azul, queso de cabra y queso crema…179'
+                },
+                negrita: {
+                    img: 'imgm/pizzas/negrita.jpg',
+                    desc: 'Pizza Negrita: Carne molida, aceitunas negras, tocino y espinacas…179'
+                },
+                carnes_frias: {
+                    img: 'imgm/pizzas/carnes frias.jpg',
+                    desc: 'Pizza Carnes Frías: Salami, jamón, chorizo y pepperoni…179'
+                },
+                pizza_jalapeno: {
+                    img: 'imgm/pizzas/piz jalapeño.jpg',
+                    desc: 'Pizza Jalapeño: Salchicha, jamón, chorizo y chiles jalapeños…179'
+                },
+                pizza_de_papa: {
+                    img: 'imgm/pizzas/piz papa.jpg',
+                    desc: 'Pizza de Papa: Papa al horno con mantequilla, crema, tocino, especial y arugula…179'
+                },
+                boneless: {
+                    img: 'imgm/pizzas/boneless.jpg',
+                    desc: 'Boneless del sabor de tu elección… boneless bañados en tu salsa favorita y queso mozzarella…209'
+                },
+                arracherona: {
+                    img: 'imgm/pizzas/arracherona.jpg',
+                    desc: 'Arracherona: Carne de arrachera con jitomate, cebolla, guacamole…209'
+                },
+                pastor_pinia: {
+                    img: 'imgm/pizzas/pastor.jpg',
+                    desc: 'Pastor con Piña: Pastor de la casa con cilantro, cebolla, salsa de guacamole y piña…209'
+                },
+                doritos_pizza: {
+                    img: 'imgm/pizzas/doritos piz.jpg',
+                    desc: 'Doritos Pizza: Pepperoni, Salchicha para asar, Doritos nachos y guacamole de la casa…209'
+                },
+            },
+            hamburguesas: {
+                clasica_burger: {
+                img: 'imgm/hamburguesas/clasica.jpg',
+                desc: 'CLÁSICA BURGER\nRegular 100 gr $95\nDoble 200gr. $129\nLa original hamburguesa con queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            bacon_burger: {
+                img: 'imgm/hamburguesas/becon.jpg',
+                desc: 'BACON BURGER\nRegular 100 gr $129\nDoble 200gr. $159\nTocino, queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            guacamole_burger: {
+                img: 'imgm/hamburguesas/guacamole bur.jpg',
+                desc: 'GUACAMOLE BURGER\nRegular 100 gr $129\nDoble 200gr. $159\nDelicioso guacamole con pico de gallo, cebolla salteada y queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            fritos_burger: {
+                img: 'imgm/hamburguesas/fritos bur.jpg',
+                desc: 'FRITOS BURGER\nRegular 100 gr $149\nDoble 200gr. $179\nFritos enchilados, tocino, cebolla salteada, salsa BBQ y queso mozzarella , mayonesa, lechuga, jitomate y cebolla.'
+            },
+            pollito_burger: {
+                img: 'imgm/hamburguesas/pollito bur.jpg',
+                desc: 'POLLITO BURGER\nRegular 100gr $109\nDoble 200gr $129\nPechuga de pollo, queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            bbq_bufalo_burger: {
+                img: 'imgm/hamburguesas/bbq o bufalo.jpg',
+                desc: 'BBQ o BUFALO BURGER\nRegular 100 gr $129\nDoble 200gr. $149\npollo cubierto con salsa BBQ o Búfalo, queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            onion_ring_burger: {
+                img: 'imgm/hamburguesas/onion ring.jpg',
+                desc: 'ONION RING BURGER\nRegular 100 gr $149\nDoble 200gr. $169\nDeliciosa hamburguesa con tocino, queso americano, aros de cebolla, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            mexican_burger: {
+                img: 'imgm/hamburguesas/mexican.jpg',
+                desc: 'MEXICAN BURGER\nRegular 100 gr $139\nDoble 200gr. $169\nTocino, chorizo, chiles toreados, cebolla asada, queso mozzarella, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            chicken_chipotle_tender: {
+                img: 'imgm/hamburguesas/tender bur.jpg',
+                desc: 'CHICKEN CHIPOTLE TENDER\nRegular 100 gr $139\nDoble 200gr. $159\nHamburguesa de chicken tender con salsa chipotle de la casa, queso mozzarella, aderezo ranch, jitomate, cebolla y lechuga.'
+            },
+            champi_burger: {
+                img: 'imgm/hamburguesas/champi bur.jpg',
+                desc: 'CHAMPI BURGER\nRegular 100gr. $109\nDoble 200gr. $139\nChampiñones, queso mozzarella gratinado, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            hawaiana_burger: {
+                img: 'imgm/hamburguesas/hawaiana bur.jpg',
+                desc: 'HAWAIANA BURGER\nRegular 100gr. $119\nDoble 200gr $149\nPiña, jamón, queso mozzarella gratinado, mayonesa, lechuga, jitomate y cebolla.'
+            },
+            arrachera_burger: {
+                img: 'imgm/hamburguesas/arrachera.jpg',
+                desc: 'ARRACHERA BURGER\nEspecial 200gr. $139\nDoble 400gr. $209\nDeliciosa arrachera, cebolla salteada ,queso mozzarella gratinado, mayonesa, lechuga, jitomate.'
+            },
+            doritos_burger: {
+                img: 'imgm/hamburguesas/doritos bur.jpg',
+                desc: 'DORITOS BURGUER\nRegular 100 gr $149\nDoble 200gr. $169\nHamburguesa con doritos, salchicha para asar, guacamole, jitomate, cebolla y lechuga.'
+            },
+            chile_momia_burger: {
+                img: 'imgm/hamburguesas/chile momia bur.jpg',
+                desc: 'CHILE MOMIA BURGER\nRegular 100 gr $149\nDoble 200 gr. $189\nHamburguesa con 2 chiles Güeros rellenos de queso crema Philadelphia y camarón, envueltos en tocino, sobre una cama de jitomate, cebolla y lechuga.'
+            },
+                crunchy_burger: {
+                    img: 'imgm/hamburguesas/crunchy bur.jpg',
+                    desc: 'CRUNCHY BURGUER (POLLO EMPANIZADO)\nRegular 100 gr $129\nDoble 200gr. $149\nHamburguesa de pollo empanizado con jitomate, cebolla, lechuga, queso mozzarella y aderezo de queso azul de la casa.'
+                },
+                la_huevona_burger: {
+                    img: 'imgm/hamburguesas/huevona bur.jpg',
+                    desc: 'LA HUEVONA BURGUER\nRegular 100gr $169\nDoble 200gr $199\nCarne de res, tocino, huevo estrellado, chorizo, guacamole, jitomate, cebolla, lechuga y queso mozzarella.'
+                },
+                hamburguesa_camarones_empanizados: {
+                    img: 'imgm/hamburguesas/camarones emp bur.jpg',
+                    desc: 'HAMBURGUESA CAMARONES EMPANIZADOS\nRegular 100 gr $139\nDoble 200gr. $169\nCamarones empanizados, queso asadero gratinado, aderezo de cilantro, jitomate, cebolla y lechuga.'
+                },
+                hawaiana_endiablada: {
+                    img: 'imgm/hamburguesas/hawa endiablada bur.jpg',
+                    desc: 'HAWAIANA ENDIABLADA\nRegular 100gr $169\nDoble 200gr $199\nCarne, piña, tocino, rebanas de queso mozzarella, bañada en salsa BBQ, acompañada de camarones en salsa diabla.'
+                },
+                nortena_burger: {
+                    img: 'imgm/hamburguesas/norteña bur.jpg',
+                    desc: 'NORTEÑA BURGUER\nRegular 100 gr $169\nDoble 200gr. $209\nHamburguesa de carne asada, chipotle, elotes, guacamole, nopal a la plancha, jitomate, cebolla y lechuga.'
+                },
+                cochinita_burger: {
+                    img: 'imgm/hamburguesas/cochinita bur.jpg',
+                    desc: 'COCHINITA BURGUER\nRegular 100gr. $149\nDoble 200gr $179\nCarne de hamburguesa, mayonesa, lechuga, jitomate, cochinita pibil, queso asadero, cebolla morada con chile habanero y limón.'
+                },
+                boneless_burger: {
+                    img: 'imgm/hamburguesas/boneless bur.jpg',
+                    desc: 'BONELESS BURGUER\nRegular 100gr. $159\nDoble 200gr $169\nBoneless de el sabor de tu preferencia con lechuga, jitomate, cebolla y aderezo ranch.'
+                },
+                pulled_pork: {
+                    img: 'imgm/hamburguesas/pulled bur.jpg',
+                    desc: 'PULLED PORK\nRegular 100 gr $139\nDoble 200gr. $169\nPulled Pork, queso asadero mozzarella, guacamole con jitomate, cebolla y lechuga.'
+                },
+                chees_chees_burger: {
+                    img: 'imgm/hamburguesas/chees chees bur.jpg',
+                    desc: 'CHEES CHEES BÚRGUER\nRegular 100 gr $149\nDoble 200gr. $169\nHamburguesa de res con queso americano sobre un medallón de queso gouda empanizado acompañado de cebolla con tocino (NO LLEVA JITOMATE NI LECHUGA).'
+                },
+                camarones_al_ajillo: {
+                    img: 'imgm/hamburguesas/camarones ajillo bur.jpg',
+                    desc: 'CAMARONES AL AJILLO\nRegular 100 gr $159\nDoble 200gr. $179\nHamburguesa de camarones al ajillo picante (receta de la casa), queso gouda gratinado, jitomate, cebolla y lechuga.'
+                },
+                chori_burger: {
+                    img: 'imgm/hamburguesas/chori bur.jpg',
+                    desc: 'CHORI BURGUER\nRegular 100 gr $189\nDoble 200gr. $209\nHamburguesa de queso mozzarella, carne de hamburguesa, tiras de chorizo argentino, chimichurri argentino, jitomate, cebolla y lechuga.'
+                },
+                chips_burger: {
+                    img: 'imgm/hamburguesas/chips bur.jpg',
+                    desc: 'CHIPS BURGUER\nRegular 100 gr $139\nDoble 200 gr. $169\nPollo empanizado con chips, aderezo sweet, queso mozzarella, jitomate, lechuga y cebolla.'
+                },
+                la_camarona: {
+                    img: 'imgm/hamburguesas/camarona bur.jpg',
+                    desc: 'LA CAMARONA\nRegular 100 gr $145\nDoble 200gr. $195\nCamarones a la plancha con queso mozzarella, tocino, jitomate, cebolla y lechuga.'
+                }
+            },
+            costillas: {
+                costillas: {
+                    img: 'imgm/freidora/costillas.jpg',
+                    desc: '400 Gramos de Costillas con tu salsa preferida acompañadas de zanahoria y 100gr. de papas a la francesa…219'
+                }
+            },
+            alitas: {
+                alitas_8: {
+                    img: 'imgm/freidora/alitas8.jpg',
+                    desc: 'Orden con 8 piezas de alitas...125'
+                },
+                alitas_12: {
+                    img: 'imgm/freidora/alitas12.jpg',
+                    desc: 'Orden con 12 piezas de alitas...149'
+                }
+            },
+            baguet: {
+                choripan: {
+                    img: 'imgm/baguetto/choripan.jpg',
+                    desc: 'Choripán: Chorizo argentino, chimichurri argentino y queso gouda...$169'
+                },
+                cuatro_quesos: {
+                    img: 'imgm/baguetto/4 quesos.jpg',
+                    desc: 'Cuatro quesos: Mozzarella, parmesano, queso de cabra y gouda...$129'
+                },
+                pechuga_pollo: {
+                    img: 'imgm/baguetto/pechuga de pollo.jpg',
+                    desc: 'Pechuga de Pollo: Pechuga de pollo, queso, pimientos, espinacas y lechuga...$129'
+                },
+                pierna_casa: {
+                    img: 'imgm/baguetto/pierna de la casa.jpg',
+                    desc: 'Pierna de la casa: Pierna con chilorio, cebolla y lechuga, aguacate...$139'
+                },
+                jamon_serrano: {
+                    img: 'imgm/baguetto/jamon cerrano.jpg',
+                    desc: 'Jamón Serrano: Jamón Serrano, queso gouda, jitomate, cebolla, lechuga...$169'
+                },
+                carnes_frias: {
+                    img: 'imgm/baguetto/carnes frias.jpg',
+                    desc: 'Baguette Carnes Frías: Chorizo español, salami madurado, pepperoni y gouda (sin verduras)...$159'
+                },
+                arrachera: {
+                    img: 'imgm/baguetto/arrachera.jpg',
+                    desc: 'Arrachera: Arrachera con guacamole y queso gouda...$149'
+                },
+                italiano: {
+                    img: 'imgm/baguetto/italiano.jpg',
+                    desc: 'Italiano: Pepperoni, salami, aceituna negra, queso mozzarella, queso parmesano, bañados en salsa de tomate receta de la casa (sin verdura)...$149'
+                },
+            },
+            alambres: {
+                santa_maria: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTA+MARIA',
+                    desc: 'SANTA MARÍA: Nuestra Arrachera especial, chuleta ahumada, tocino, chorizo, pimiento morrón, cebollita asada y queso fundido... $169'
+                },
+                santa_catarina: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTA+CATARINA',
+                    desc: 'SANTA CATARINA: Nuestra Arrachera especial, tocino, chile poblano, cebolla y queso fundido... $159'
+                },
+                santa_valeria: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTA+VALERIA',
+                    desc: 'SANTA VALERIA: Pollo, tocino, cebolla, pimiento morrón, y queso fundido... $159'
+                },
+                santa_regina: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTA+REGINA',
+                    desc: 'SANTA REGINA: Deliciosa discada de la casa con queso fundido... $169'
+                },
+                mar_y_tierra: {
+                    img: 'https://via.placeholder.com/700x500?text=MAR+Y+TIERRA',
+                    desc: 'MAR Y TIERRA: Camarón, arrachera, tocino, pimiento morrón, cebolla y queso fundido... $189'
+                },
+                santo_pecado: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTO+PECADO',
+                    desc: 'SANTO PECADO: Arrachera, salchicha para asar, chorizo, pimientos, cebolla, huevo y queso fundido... $169'
+                },
+                santa_culpa: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTA+CULPA',
+                    desc: 'SANTA CULPA: Arrachera, salchicha, pico de gallo, chorizo, cebolla, queso fundido... $159'
+                },
+                santo_delirio: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTO+DELIRIO',
+                    desc: 'SANTO DELIRIO: Arrachera, elote, chipotle, nopal cebolla chile poblano... $169'
+                },
+                santo_dios: {
+                    img: 'https://via.placeholder.com/700x500?text=SANTO+DIOS',
+                    desc: 'SANTO DIOS: Arrachera, tocino, champiñones, cebolla, pimientos y queso fundido... $169'
+                }
+            },
+            cortes: {
+                arrachera_250gr: {
+                    img: 'https://via.placeholder.com/700x500?text=CORTE+DE+ARRACHERA',
+                    desc: 'CORTE DE ARRACHERA, 250gr. De exquisita arrachera acompañada de guacamole, cebollitas asadas, nopal asado y chiles toreados… $279'
+                },
+                carne_asada_250gr: {
+                    img: 'https://via.placeholder.com/700x500?text=CARNE+ASADA',
+                    desc: 'CARNE ASADA, 250gr. De bistec especial asado a la parrilla, acompañado de cebollitas asadas, nopal asado y chilitos toreados… $279'
+                },
+                t_bone: {
+                    img: 'https://via.placeholder.com/700x500?text=T-BONE',
+                    desc: 'T-BONE, Exquisito corte, acompañado de nopalitos asados, guacamole, cebollas asadas y chiles toreados… $349'
+                },
+                pechuga_lemon_peper: {
+                    img: 'https://via.placeholder.com/700x500?text=PECHUGA+LEMON-PEPER',
+                    desc: 'PECHUGA LEMON-PEPER: 250 gr. de pechuga de pollo, costra de queso, pimientos, lechuga… $229'
+                },
+                rib_eye: {
+                    img: 'https://via.placeholder.com/700x500?text=RIB+EYE',
+                    desc: 'RIB EYE: Exquisito corte acompañado de nopalitos asados, guacamole, cebollas asadas y chiles toreados… $329'
+                },
+                parrillada_personal: {
+                    img: 'https://via.placeholder.com/700x500?text=PARRILLADA',
+                    desc: 'PARRILLADA (personal): Arrachera, pollo, salchicha para asar, chuleta ahumada, chorizo, frijoles, cebolla asada, chile asado, nopal asado y una quesadilla… $209'
+                }
+            },
+            quesadillas: {
+                pastor_gringa: {
+                    img: 'https://via.placeholder.com/700x500?text=Pastor,+la+original+gringa',
+                    desc: 'Quesadilla de Pastor, la original gringa… $69'
+                },
+                bistec_lechero: {
+                    img: 'https://via.placeholder.com/700x500?text=Bistec,+el+legendario+lechero',
+                    desc: 'Quesadilla de Bistec, el legendario lechero… $69'
+                },
+                chuleta: {
+                    img: 'https://via.placeholder.com/700x500?text=Chuleta',
+                    desc: 'Quesadilla de Chuleta… $69'
+                },
+                arrachera: {
+                    img: 'https://via.placeholder.com/700x500?text=Arrachera',
+                    desc: 'Quesadilla de Arrachera… $79'
+                },
+                chorizo: {
+                    img: 'https://via.placeholder.com/700x500?text=Chorizo',
+                    desc: 'Quesadilla de Chorizo… $69'
+                },
+                champiñones: {
+                    img: 'https://via.placeholder.com/700x500?text=Champiñones',
+                    desc: 'Quesadilla de Champiñones… $69'
+                },
+                sencilla: {
+                    img: 'https://via.placeholder.com/700x500?text=Sencilla',
+                    desc: 'Quesadilla Sencilla… $45'
+                }
+            },
+            tacos: {
+                pastor: {
+                    img: 'https://via.placeholder.com/700x500?text=Pastor',
+                    desc: 'Taco de Pastor… $39'
+                },
+                asada: {
+                    img: 'https://via.placeholder.com/700x500?text=Asada',
+                    desc: 'Taco de Asada… $49'
+                },
+                arrachera: {
+                    img: 'https://via.placeholder.com/700x500?text=Arrachera',
+                    desc: 'Taco de Arrachera… $49'
+                },
+                chorizo: {
+                    img: 'https://via.placeholder.com/700x500?text=Chorizo',
+                    desc: 'Taco de Chorizo… $39'
+                }
+            },
+            tortas:{
+                asada: {
+                    img: 'https://via.placeholder.com/700x500?text=Asada',
+                    desc: 'Torta de Asada… $95'
+                },
+                pollo: {
+                    img: 'https://via.placeholder.com/700x500?text=Pollo',
+                    desc: 'Torta de Pollo… $89'
+                },
+                jamon: {
+                    img: 'https://via.placeholder.com/700x500?text=Jamón',
+                    desc: 'Torta de Jamón… $89'
+                },
+                chorizo: {
+                    img: 'https://via.placeholder.com/700x500?text=Chorizo',
+                    desc: 'Torta de Chorizo… $89'
+                },
+                pastor: {
+                    img: 'https://via.placeholder.com/700x500?text=Pastor',
+                    desc: 'Torta de Pastor… $89'
+                },
+                chuleta: {
+                    img: 'https://via.placeholder.com/700x500?text=Chuleta',
+                    desc: 'Torta de Chuleta… $89'
+                },
+                arrachera: {
+                    img: 'https://via.placeholder.com/700x500?text=Arrachera',
+                    desc: 'Torta de Arrachera… $99'
+                },
+                champiñones_pollo_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Champiñones,+pollo+y+queso+fundido',
+                    desc: 'Torta de Champiñones, pollo y queso fundido… $109'
+                },
+                jamon_champinones_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Jamón,+champiñones+y+queso+fundido',
+                    desc: 'Torta de Jamón, champiñones y queso fundido… $109'
+                },
+                queso_fundido: {
+                    img: 'https://via.placeholder.com/700x500?text=Queso+fundido',
+                    desc: 'Torta de Queso fundido… $109'
+                },
+                huevo_jamon_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Huevo,+jamón+y+queso+fundido',
+                    desc: 'Torta de Huevo, jamón y queso fundido… $109'
+                },
+                jamon_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Jamón+y+queso+fundido',
+                    desc: 'Torta de Jamón y queso fundido… $109'
+                },
+                chuleta_pina_champinones_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Chuleta,+piña,+champiñones+y+queso+fundido',
+                    desc: 'Torta de Chuleta, piña, champiñones y queso fundido… $109'
+                },
+                pastor_pina_jamon_queso: {
+                    img: 'https://via.placeholder.com/700x500?text=Carne+al+pastor,+piña,+jamón+y+queso+fundido',
+                    desc: 'Torta de Carne al pastor, piña, jamón y queso fundido… $109'
+                }
+            },
+            ensaladas: {
+                pollo_empanizado: {
+                    img: 'https://via.placeholder.com/700x500?text=Ensalada+de+pollo+empanizado',
+                    desc: 'Ensalada de pollo empanizado: Ensalada con 150 gramos de pollo empanizado en tiras, jamón, queso panela, col morada, lechuga, zanahoria, elote y aderezo ranch… $139'
+                },
+                frutos_dulces: {
+                    img: 'https://via.placeholder.com/700x500?text=Frutos+Dulces',
+                    desc: 'Frutos Dulces: Espinacas, col morada, lechuga, zanahoria, manzana, queso feta, nuez, almendra, arándanos, vinagreta de mostaza y crotones… $119'
+                },
+                arrachera: {
+                    img: 'https://via.placeholder.com/700x500?text=Ensalada+de+Arrachera',
+                    desc: 'Ensalada de Arrachera: Lechuga, col morada, zanahoria, granos de elote, arrachera (150 gr), crotones y guacamole… $139'
+                },
+                pechuga_pollo: {
+                    img: 'https://via.placeholder.com/700x500?text=Pechuga+de+Pollo',
+                    desc: 'Pechuga de Pollo: Espinacas, lechuga, pechuga de pollo a la plancha (150 gr), zanahoria, granos de elote, aguacate, crotones y ranch… $139'
+                },
+                bufalo_boneless: {
+                    img: 'https://via.placeholder.com/700x500?text=Búfalo+Boneless',
+                    desc: 'Búfalo Boneless: Lechuga, zanahoria, cebolla morada, col morada, apio, boneless, queso mozzarella, crotones, fritos, salsa búfalo y aderezo ranch… $175'
+                }
+            },
+            postres: {
+                pan_elote_cajeta: {
+                    img: 'imgm/panel.jpg',
+                    desc: 'Pan de elote con cajeta… $55'
+                },
+                miniwafles_helado: {
+                    img: 'imgm/miniwaf.jpg',
+                    desc: 'Miniwafles con helado… $59'
+                },
+                crepas: {
+                    img: 'imgm/crepa.jpg',
+                    desc: 'Crepas… $59'
+                }
+            }
+        };
+    
+    
+            function updateMenu(category) {
+                const selectedValue = document.getElementById(category).value;
+                const foodDisplay = document.getElementById('food-display');
+                const foodImage = document.getElementById('food-image');
+                const foodDescription = document.getElementById('food-description');
+    
+                if (selectedValue && menuData[category][selectedValue]) {
+                    const food = menuData[category][selectedValue];
+                    foodImage.src = food.img;
+                    foodImage.style.display = 'block';
+                    foodDescription.textContent = food.desc;
+                } else {
+                    foodImage.style.display = 'none';
+                    foodDescription.textContent = '';
+                }
+            }
+        </script>
+        <hr class="is-yellow">
+        <br><br>
+        <div class="bottom-menu">
+            <a href="menu.html">Menu</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicaciones.html">Encuentra nustra sucursal</a>
+            <a href="#">Bolsa de Trabajo</a>
+          </div>
+        <br><br><br><br><br>
+        <section class="buttons">
+        <a href="https://atom.bio/baguettosanpancho" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/parrillada_sta.regina/" class="fa fa-instagram"></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwsCQrdnzTVfcWKkcDWRQQFfCtSczvvMLJgxDgwHDMPCHZqmDHpTLSsHmfBdVdKVgRpHQf" class="fa fa-google"></a>
+        <a href="https://atom.bio/baguettosanpancho" class="fa fa-whatsapp"></a>
+      </section><br>
+      
+    
+</center>
+
+</body>
+</html>

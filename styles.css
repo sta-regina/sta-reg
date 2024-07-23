@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.menu-sections {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Separación entre listas y imagen */
+    margin-left: 150px; /* Separación entre listas y pared */
+}
+
+.menu-section {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #a9a9a9; /* Fondo gris oscuro */
+    font-size: 16px;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+#food-display {
+    text-align: left;
+}
+
+#food-image {
+    width: 600px; /* Ajuste del ancho de la imagen */
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: bold;
+}
